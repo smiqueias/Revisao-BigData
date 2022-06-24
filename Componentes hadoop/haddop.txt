@@ -1,0 +1,94 @@
+O Hadoop é formado por diversos componentes. Três desses componentes
+são os principais. Veja a seguir.
+
+ Hadoop Common: é um componente que contém utilitários usados
+em toda a aplicação. Possui diversas bibliotecas para manipulação e
+serialização de arquivos. Esse componente também é utilizado para
+disponibilizar integrações de interface para outros sistemas, como
+CloudSource e AWS S3.
+
+ Hadoop Distributed File System (HDFS): é um sistema de arquivo
+distribuído altamente tolerante a falhas que permite o armazena-
+mento e a manipulação de grandes conjuntos de dados em clusters
+de máquinas de baixo custo.
+
+ Hadoop MapReduce: é uma biblioteca especializada no processamento
+de grandes conjuntos de volumes de dados distribuídos, possuindo
+duas funções principais, a Map e a Reduce.
+
+
+O HDFS possui blocos de dados normalmente de tamanhos fixos (64MB).
+Assim, um arquivo muito grande pode ter blocos armazenados em diversas
+máquinas dentro do cluster. Além disso, o HDFS possui réplicas que adicionam
+confiabilidade ao armazenamento de dados e melhoram o processamento
+paralelo. A seguir, veja quais são os componentes do HDFS.
+
+ NameNode: conhecido como “master”, é o componente que armazena
+os metadados, monitora o status e a integridade dos dados e atribui
+tarefas do DataNode.
+
+ DataNode: é o componente que armazena os blocos com os dados
+e retorna ao NameNode o status do seu funcionamento. Caso uma
+tarefa do DataNode falhe ou pare de responder, ela será reatribuída
+ao próximo DataNode.
+
+ SecondaryNameNode: é um NameNode secundário que armazena as
+atualizações do NameNode em intervalos de tempo predefinidos. Por
+isso, é também conhecido como “checkpoint”. Ele garante a recuperação
+do estado em dado ponto.
+
+o HDFS client 1 abre o arquivop no DIstributed file system, dai localiza e obtem os blocos no NameNode
+Dai faz a leitura dentro do FsDataInputStream e manda para os Datanode e finaliza
+
+O MapReduce é um framework responsável por realizar funções de mapea-
+mento e redução. Essas tarefas devem rodar em paralelo entre as máquinas
+do cluster e em conjunto com o sistema de armazenamento HDFS. A seguir,
+veja quais são as funções do MapReduce.
+
+Map: essa função recebe os dados de entrada e os coloca em uma
+coleção de pares de chave/valor. Esses pares devem ser definidos
+pelo programador em Java ou em linguagens suportadas pelo Hadoop.
+
+Sort/Shuffle: o Sort organiza os dados recebidos pela função Map
+e atribui entrada para cada Reduce associado à mesma chave. Já o
+Shuffle transfere as saídas da função Map para os Reduce como
+entrada inicial. Essa função é feita na biblioteca MapReduce.
+
+Reduce: essa função recebe os dados do Shuffle e retorna uma lista
+de chave/valor contendo os registros. Essa função também deve ser
+definida pelo programador, assim como a Map.
+
+JobTracker: é uma função que auxilia dando suporte para a realiza-
+ção de tarefas das funções Map e Reduce, por meio de coordenadas
+enviadas para os TaskTrackers. Essa função cria um processo JVM
+para cada TaskTracker e aloca nós responsáveis por processar as
+tarefas da aplicação e monitorá-las.
+
+TaskTracker: é o processo responsável por executar as tarefas do Map
+e do Reduce e informar os progressos ao JobTracker. Assim como
+os DateNodes descritos anteriormente, essa aplicação é composta
+por diversas instâncias de TaskTrackers. Dessa maneira, é possível
+utilizar diversas máquinas para aumentar os recursos computacionais
+disponíveis no cluster.
+
+Modo local
+
+Nessa configuração, o Hadoop utiliza apenas um computador, ou seja, é confi-
+gurado para rodar em modo local. Para utilizar esse modo, é necessário alterar
+os parâmetros dos arquivos mencionados anteriormente. Nessa configuração, o
+Hadoop utiliza somente os recursos da máquina local e não é necessário utilizar
+o HDFS, já que os dados não estão distribuídos entre outras máquinas. Esse
+modo é recomendado para usuários iniciantes e durante a fase de testes, que
+não necessita de tanto processamento para a execução dos códigos.
+
+Modo pseudodistribuído
+
+Nesse modo, o Hadoop aplica configurações semelhantes às utilizadas
+em um cluster, porém ele executa a aplicação em modo local. Esse modo
+é conhecido como “cluster de uma máquina só”. A principal diferença em
+relação ao modo local com o modo pseudodistribuído, é que no modo
+pseudodistribuído, apesar de a aplicação ser local, ela permite a execução
+paralela em uma única máquina utilizando NameNode, DataNode, Job-
+Tracker, TaskTracker e SecondaryNameNode.
+
+E o modo totalmente distribuido

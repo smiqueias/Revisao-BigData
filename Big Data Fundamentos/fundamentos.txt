@@ -1,0 +1,103 @@
+5 vs do big data
+
+Tipos de dados em um sistema de gerenciamento de dados
+estruturados, não estruturados e semi estruturados
+
+Dados estruturados
+São aqueles com tamanhos definidos em seu desenvolvimento. Em grande
+parte, correspondem a números, datas e palavras. Geralmente são utilizados em
+bancos de dados do tipo relacional, em que a estrutura precisa estar definida
+por tipos e tamanhos, o que define o relacionamento por meio das chaves.
+Observe a Figura 1, em que é apresentada uma forma estruturada dos dados.
+
+Dados não estruturados
+São dados que não possuem formatos e cujo tamanho pode variar. São bas-
+tante utilizados, principalmente aqueles relacionados a imagens. Os dados não
+estruturados são encontrados em fotografias, vídeos, imagens de satélites,
+dados científicos e mídias sociais, entre outros. A Figura 2 traz um exemplo
+de dados não estruturados.
+
+Dados semiestruturados
+São considerados por especialistas da área como um meio termo entre os
+dados estruturados e os dados não estruturados. O seu uso está ligado a
+aplicações web, em que os dados são convertidos em tags (etiquetas — termo
+utilizado na linguagem de marcação utilizada por navegadores). A Figura 3
+traz um exemplo de dados semiestruturados.
+
+os 5vs do big data 
+Volume: se refere ao conceito principal do big data, em que a quan-
+tidade de dados a ser coletada e tratada representa um grande vo-
+lume. Esses dados são advindos de diversas fontes, como redes
+sociais, motores de busca da internet, e-commerce, entre outras.
+Este talvez tenha sido o grande diferencial em relação aos outros
+bancos de dados: o tratamento de grandes volumes de informações
+de dados, com formas diferentes (estruturados, não estruturados e
+semiestruturados).
+
+Velocidade: como os dados são gerados em grandes volumes, o seu
+processamento deve efetuar o tratamento da mesma forma, caso
+contrário, ocorrem filas e a consequente degradação do serviço. Para
+tanto, o servidor (hardware) deve possuir uma capacidade de proces-
+samento adequada às necessidades. O SGBD também deve permitir
+que grande quantidade de dados seja recebida e processada.
+
+Veracidade: esse talvez seja um desafio encontrado no big data, pois
+os dados coletados nem sempre vão representar uma informação
+na qual se possa ter total confiabilidade. Para isso, ao se estruturar
+uma análise de dados, faz-se necessário verificar as fontes, os dados
+tendenciosos e as datas de publicação.
+
+Variedade: os bancos de dados que trabalham dentro do conceito de big
+data devem possuir técnicas que possibilitem o tratamento dos mais
+diferentes tipos de dados, como números, tags, imagens, textos etc.
+Isso se refere a dados dos três tipos: estruturados, não estruturados
+e semiestruturados.
+
+Valor: mostra a significância dos dados coletados e tratados para a orga-
+nização, de forma que possam trazer informações relevantes, que possam
+proporcionar um diferencial de mercado ou, ainda, auxiliar os gestores na
+tomada de decisão. Esse último ponto das características do big data é
+exatamente o que as empresas buscam e precisam, pois os dados de valor
+podem ser convertidos em informações importantes para a companhia.
+
+Infraestrutura de sistema de gerenciamento de banco de dados
+
+Segurança: normalmente, os provedores disponibilizam métodos de
+segurança por padrão nos pacotes de serviços.
+
+Disponibilidade: esse ponto pode variar conforme o pacote contratado.
+O SLA (Service Level Agreement) é o acordo de nível de serviço em que
+é determinado o tempo de disponibilidade dos serviços. Um exemplo
+é um servidor que tenha um SLA de 99,999%, ou seja, o serviço poderá
+ficar indisponível apenas 5,26 minutos por ano.
+
+Interoperabilidade: os serviços em nuvem, em grande parte, permitem
+que diferentes equipamentos e tecnologias possam utilizar sistemas
+de forma transparente. Essa interoperabilidade é muito interessante
+no que tange ao big data, uma vez que os dados podem ser originados
+de diversas fontes, localizações e equipamentos, com características
+distintas.
+
+Armazenamento: é um ponto muito interessante, pois existe a pos-
+sibilidade de se contratar um espaço desejado ou pagar por espaço
+consumido em determinado tempo. Como as necessidades do big
+data são sempre de grande capacidade de armazenamento de dados,
+a solução em nuvem é uma das saídas mais interessantes.
+
+Resistência organizacional
+
+Falta de alinhamento organizacional: ocorre quando existe um distancia-
+mento entre as necessidades gerenciais e o que, de fato, a equipe de TI
+está desenvolvendo. Essa falta de alinhamento organizacional é um dos
+fatores que mais podem causar fracasso na operacionalização do big data.
+
+Falta de entendimento: os gerentes têm que estar alinhados com
+a equipe de TI. Esse estreitamento é necessário para que os filtros
+possam ser construídos pela equipe de desenvolvimento. Assim, os
+dados serão extraídos conforme a análise necessária para a tomada
+de decisão de forma mais assertiva.
+
+Resistência gerencial: novas soluções ou tecnologias podem causar
+certa resistência. Cabe ao setor de TI demonstrar o quanto os dados
+gerados pelo big data podem ser úteis para que os gestores possam
+tomar decisões com dados atualizados e tratados.
